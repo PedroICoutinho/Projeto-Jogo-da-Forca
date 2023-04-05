@@ -1,5 +1,7 @@
 
 const celulas = document.querySelectorAll(".cell")
+const restart = document.querySelector("[data-restart-button]")
+
 let isCircleTurn = true;
 
 const winningConditions = [
@@ -12,15 +14,25 @@ const winningConditions = [
     [0, 4, 8],
     [2, 4, 6]
 ]
-   
-const checkForWin = (currentPlayer)=>{
-    return winningConditions.some((combination) =>{
-        return combination.every((index) => {
-            return celulas[index].textContent === currentPlayer;
-        })
-       
-    })
+ 
+
+
+function checkForWin(currentPlayer) {
+    for (let i = 0; i < winningConditions.length; i++) {
+        for (let j = 0; j < winningConditions[i].length; j++) {
+          const cellIndex = winningConditions[i][j];
+          const cellContent = celulas[cellIndex].textContent;
+          if (cellContent === currentPlayer) {
+             console.log("estou caindo no IF")
+        }else{
+            console.log("teste")
+        }
+      }
+    }
+    
 }
+
+
 
 const swapTurns = ()=>{
     isCircleTurn = !isCircleTurn
@@ -50,10 +62,7 @@ const jogada = (event)=>{
         fazendoO(event.target)
     }
 
-    const vitoria = checkForWin(toAdd);
-    if (vitoria){
-        console.log("winner")
-    }
+   
 
 
     swapTurns();
