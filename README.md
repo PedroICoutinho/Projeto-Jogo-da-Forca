@@ -6,4 +6,4 @@ Conhecido como jogo da velha ou três linhas é um jogo de passatempo popular, q
 
 [Link](https://docs.google.com/presentation/d/1mHD5CbFdd-ptTpcAY4vbpXexqjolMTuJbBe9q1svjS4/edit?usp=sharing) para uma breve apresentação sobre mim e do jogo
 
-[Link para jogar]
+[Link para jogar] (https://pedroicoutinho.github.io/Projeto-Jogo-da-Velha/)
